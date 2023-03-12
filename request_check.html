@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<title>의뢰서 확인</title>
+<script src="jquery-3.5.1.min.js"></script>
+<script type="text/javascript"> 
+        $(document).ready(function(){
+            
+            $(document).mousemove(function(e){
+                var mouseX = e.pageX;
+                var mouseY = e.pageY;
+
+                $('.cursor').css({
+                    left: mouseX + "px",
+                    top : mouseY + "px"
+                })
+            })
+        })
+</script> 
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/quiple/hbios-sys@latest/hbios-sys.css">
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<style>
+	@import url('https://cdn.jsdelivr.net/gh/quiple/hbios-sys@latest/hbios-sys.css');
+	
+	body {
+		background-image: url('../Mob_homepage/request_img/submain_bg.png'); /*이미지 넣기*/
+		background-size: 80%;
+	}
+		
+	#title {
+		padding-left: 40px;
+		padding-top: 20px;
+		padding-bottom: 60px;
+		color: #DCDCDC;
+		font-family: 'HBIOS-SYS';
+		font-size: 80px;
+		text-shadow: 3px 3px 3px #A9A9A9;
+	}
+	
+	.bg1{
+		width: 700px;
+		height: 35px;
+		margin-left: 20%;
+		background-color: #ff00dd;
+		border: 3.5px solid white;
+		margin-bottom: 0.5%;
+	}
+	.cursor{
+		position:absolute;
+	    top:0;
+	    left: 0;
+	    z-index: 9999;
+	    transform:translate(80%, -0%);
+	}
+	
+    .x img {
+    	transition: all 0.2s linear;
+    }
+    
+    .x:hover img {
+    	transform: scale(1.2);
+    }
+    
+    .reset img {
+    	transition: all 0.2s linear;
+    }
+    
+    .reset:hover img {
+    	transform: scale(1.2);
+    }
+</style>
+</head>
+<body>
+	<script>
+		alert('의뢰서가 덜 작성되었을 경우, 자동 취소된다는 점 유의 부탁드립니다.');
+	</script>
+	
+	<div class="cursor">
+        <img src="cursor_img/cursor_pink.png" style="width: 120px;" alt="fllow_img">
+    </div>
+
+		<!-- 의뢰서 내용 성공-->
+		<audio autoplay>
+			<source src="audio/clab.mp3" type="audio/mp3">
+		</audio>
+		<div style="margin-left: 4.5%;">
+			<img alt="사진" src="main_img/pink_star_XS.gif" style="margin-bottom: -860px;">
+			<img alt="사진" src="main_img/pink_star_M.gif" style="margin-bottom: -860px;">
+			<img alt="사진" src="main_img/pink_star_XL.gif" style="margin-bottom: -860px;">
+			<img alt="사진" src="main_img/pink_star_M.gif" style="margin-bottom: -860px;">
+			<img alt="사진" src="main_img/pink_star_L.gif" style="margin-bottom: -860px;">
+			<img alt="사진" src="main_img/pink_star_L.gif" style="margin-bottom: -860px;">
+			<img alt="사진" src="main_img/pink_star_S.gif" style="margin-bottom: -860px;">
+			<img alt="사진" src="main_img/pink_star_XS.gif" style="margin-bottom: -860px;">
+			<img alt="사진" src="main_img/pink_star_S.gif" style="margin-bottom: -860px;"> 
+			<img alt="사진" src="main_img/pink_star_XL.gif" style="margin-bottom: -860px;"> 
+		</div>
+		
+		<div style="margin-top: -5%;">
+			<div id="title" align="center"><img src="request_img/succes.png" alt="사진" style="width: 1200px; height: 190x;"/></div>
+			
+			<div style="margin-top: 3%; margin-left: 12%;">
+			<form method=post action=submain.html>			
+				<div class="bg1">
+					<span class="x">
+						<a href="submain.html"><img src="request_img/bar_x.png" alt="x 사진" style="margin-left: 94%; margin-top: -0.5%;"/></a>
+					</span>
+				</div>								
+			</form>
+			<textarea style="margin-left: 20%; width: 700px; height: 150px; background-color: #e9daec; text-align: center; opacity: 0.8; font-family: 'HBIOS-SYS'; font-size: 35px;" readonly>
+			&nbsp;&#10;의뢰서가 성공적으로 접수되었습니다.
+			</textarea>
+			</div>
+		</div>
+		
+		<div align="center" style="margin-top: 3%;">
+			<img alt="사진" src="request_img/left.gif" style="width: 160px; height: 90px; margin-right: 1.5%;">
+			<span class="reset">
+				<a href="request.html"><img src="request_img/reset_button.png" alt="reset" style="width: 300px; margin-top: 7%; height: 75px;"/></a>
+			</span>
+			<img alt="사진" src="request_img/right.gif" style="width: 160px; height: 90px; margin-left: 1.5%;">
+		</div>
+</body>
+</html>
